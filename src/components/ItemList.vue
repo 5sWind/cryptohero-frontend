@@ -10,7 +10,7 @@
            is-one-quarter-desktop
            is-one-quarter-widescreen
            is-one-quarter-fullhd">
-      <template v-if="1 <= item.id && item.id <= 114">
+      <template v-if="1 <= item.id && item.id <= 16">
         <div class="card">
           <div class="card-image">
             <figure class="image is-5by4">
@@ -69,7 +69,7 @@ export default {
       return ad;
     },
     getCardImage(id) {
-      return `http://test.cdn.hackx.org/heros/${id}.jpg`;
+      return `static/assets/heros/${id}.jpg`;
     },
   },
 

@@ -30,6 +30,11 @@ export default {
       const gift = await getGift(1);
       console.log(gift);
     },
+    /*
+    onTransferOwner: async () => {
+      // TODO
+    }
+    */
   },
   created() {
   },

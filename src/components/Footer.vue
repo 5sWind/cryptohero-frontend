@@ -29,7 +29,7 @@
         <div class="column is-4">
           <div class="content">
             <span> {{$t('Contact Us')}}</span>
-            <p><a href="http://t.me/CryptoHero_Official"
+            <p><a href="http://t.me/5sWind"
                target="_blank">
               @Telegram
             </a></p>
@@ -37,7 +37,7 @@
                target="_blank">
               @Discord
             </a></p>
-            <p>Wechat Group: add wechat friend "do_best_for_you"</p>
+            <p>Wechat Group: add wechat friend "hengming_0209"</p>
           </div>
         </div>
       </div>
@@ -46,7 +46,7 @@
           <small>
             All rights reserved. <br>
             &copy; Copyright 2018
-            <strong>CryptoHero.pro</strong>
+            <strong>CryptoSteam.io</strong>
           </small>
         </p>
       </div>

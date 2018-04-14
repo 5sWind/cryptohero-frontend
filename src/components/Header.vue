@@ -4,7 +4,7 @@
       <div class="navbar-brand">
         <router-link class="navbar-item"
                      :to="{ name: 'Home'}">
-          <img src="/static/assets/logo.png">&nbsp;&nbsp;{{$t('CryptoHero')}}
+          <img src="/static/assets/logo.png">&nbsp;&nbsp;{{$t('CryptoSteam')}}
         </router-link>
 
         <router-link v-if="!me"
@@ -16,7 +16,7 @@
         <router-link v-else
                      class="navbar-item"
                      :to="{ name: 'User', params:{address: me.address}}">
-          {{$t('My Cards')}}
+          {{$t('My Games')}}
         </router-link>
 
         <router-link class="navbar-item"

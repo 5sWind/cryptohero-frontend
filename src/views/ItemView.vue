@@ -63,7 +63,9 @@
                   class="button is-info"
                   v-if="!isConvert"
                   @click="exchangeToken">{{$t('Claim Lucky Token')}}</button>
-
+            <button
+                  class="button is-warning"
+                  @click="onTransferOwner">{{$t('Transfer Game')}}</button>
             </div>
 
           </template>
@@ -102,11 +104,13 @@ export default {
       return this.$store.state.items[this.itemId].isLCYClaimed;
     },
     getCardImage() {
-      return `http://test.cdn.hackx.org/heros/${this.itemId}.jpg`;
+      return `static/assets/heros/${this.itemId}.jpg`;
     },
+    /*
     getCardBackSideImage() {
       return `http://test.cdn.hackx.org/back/back_${this.itemId}.jpg`;
     },
+    */
     isOwner() {
       return this.item.owner === this.me.address;
     },
@@ -146,6 +150,23 @@ export default {
       if (ad !== null) {
         if (ad.length > 100) {
           return alert(this.$t('UPDATE_SLOGAN_FAIL_TOO_LOOG_MSG'));
+        }
+        setGg(this.itemId, ad)
+          .then(() => {
+            this.$store.dispatch('FETCH_AD', this.itemId);
+          })
+          .catch((e) => {
+            alert(this.$t('UPDATE_SLOGAN_FAIL_MSG'));
+            console.log(e);
+          });
+      }
+      return 0;
+    },
+    async onTransferOwner() {
+      const ad = prompt(this.$t('TRANSFER_GAME_PROMPT'));
+      if (ad !== null) {
+        if (ad.length > 42 || ad.length < 42) {
+          return alert(this.$t('TRANSFER_GAME_FAIL'));
         }
         setGg(this.itemId, ad)
           .then(() => {
